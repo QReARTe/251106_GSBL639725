@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Viewer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="visualization">
+            <div class="title-bar">
+                <h2 class="section-title" data-i18n="visualizationTitle"></h2>
+            </div>
+            <div id="image-container" class="image-container">
+                <div class="image-wrapper" id="image-wrapper"></div>
+            </div>
+        </div>
+
+        <div class="configuration">
+            <div class="language-selector">
+                <label for="language" data-i18n="languageLabel">Idioma:</label>
+                <select id="language">
+                    <option value="es">Español</option>
+                    <option value="en" selected>English</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                    <option value="it">Italiano</option>
+                    <option value="pt">Português</option>
+                </select>
+            </div>
+
+            <div class="color-controls">
+                <h2 class="section-title" data-i18n="colorsTitle">Colores</h2>
+                <div id="controls"></div>
+                <button id="select-all" data-i18n="selectAll">Seleccionar todos</button>
+                <button id="deselect-all" data-i18n="deselectAll">Deseleccionar todos</button>
+            </div>
+
+            <div class="theme-toggle">
+                <span class="theme-icon">🌞</span>
+                <label class="switch">
+                    <input type="checkbox" id="theme-switch">
+                    <span class="slider"></span>
+                </label>
+                <span class="theme-icon">🌜</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="viewer.js"></script>
+</body>
+</html>
